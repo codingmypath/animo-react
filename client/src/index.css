@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #edf0eb;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+input[type=radio]:checked + .radioButtons {
+  color: #2F3E46;
+}
