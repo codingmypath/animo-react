@@ -1,4 +1,4 @@
-![alt text](https://i.ibb.co/kKnpL4g/butterfly-logo.png) 
+![alt text](https://i.ibb.co/HP3bY5j/animo-logo-removebg.png) 
 
 # Animo
 
