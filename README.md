@@ -21,6 +21,9 @@ Animo is a full stack app where users can create journal entries each day and fi
 ---
 
 # How to Use
+
+In order to have access to the calendar, a user must register
+
 ![alt text](https://i.ibb.co/Cv428Pk/animo-ss2.png)
 
 
@@ -31,3 +34,4 @@ Animo is a full stack app where users can create journal entries each day and fi
 
 First Animo version using EJS:
 
+https://github.com/codingmypath/mvc-animo.git
