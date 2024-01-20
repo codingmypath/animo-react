@@ -65,7 +65,7 @@ export const NewEntry = ({onSave, onEntry, onClose, entryDate}) => {
                 setError(data.message)
             }
             onEntry()
-            // window.location.reload();
+            window.location.reload();
             // navigate(`/entry/${data._id}`)
         } catch(error) {
             setError(error.message);

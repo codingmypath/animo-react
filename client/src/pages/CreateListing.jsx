@@ -184,7 +184,7 @@ function CreateListing() {
     <>
     { userEntries &&
       <div>
-      <section className="font-mulish px-2 w-full sm:px-9 max-w-[800px] m-auto mt-20 p-8 pb-20">
+      <section className="font-mulish px-2 w-full sm:px-9 max-w-[800px] m-auto mt-20 p-4 pb-20">
           {/* <section className="quote">
               <h1>Quote of the Day</h1>
               <p className="quotes"></p>
