@@ -26,12 +26,15 @@ In order to have access to the calendar, a user must register
 
 ![alt text](https://i.ibb.co/Cv428Pk/animo-ss2.png)
 
+A user can update their profile picture and username. Also, delete their account or sign out. 
+
+![alt text](https://i.ibb.co/0j9VTL5/animo-profile.png)
 
 ---
 
 
 # Other Projects
 
-First Animo version using EJS:
+First Animo app version using EJS:
 
 https://github.com/codingmypath/mvc-animo.git
