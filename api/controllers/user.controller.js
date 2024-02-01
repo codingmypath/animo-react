@@ -44,12 +44,19 @@ export const deleteUser = async (req, res, next) => {
     }
 }
 
-export const getUserEntries = async (req, res, next) => {
 
+export const getUserEntries = async (req, res, next) => {
+    
     if (req.user.id === req.params.id) {
         try {
             const entries = await Entry.find({ userRef: req.params.id});
-            res.status(200).json(entries);
+            const updated = entries.map( item => Object.assign(item, {description: CryptoJS.AES.decrypt(item.description, 'password').toString(CryptoJS.enc.Utf8)
+            }))
+             
+            // const decryptDescription = CryptoJS.AES.decrypt(entries.description, 'password').toString(CryptoJS.enc.Utf8);
+            
+            // const decryptEntries = { date, title, mood, userRef, description: decryptDescription}
+            res.status(200).json(updated);
         } catch (error) {
             next(error)
         }
@@ -58,5 +65,21 @@ export const getUserEntries = async (req, res, next) => {
     }
    
 }
+
+
+// export const getUserEntries = async (req, res, next) => {
+
+//     if (req.user.id === req.params.id) {
+//         try {
+//             const entries = await Entry.find({ userRef: req.params.id});
+//             res.status(200).json(entries);
+//         } catch (error) {
+//             next(error)
+//         }
+//     } else {
+//         return next(errorHandler(401, 'You can only view your own entries!'))
+//     }
+   
+// }
 
 

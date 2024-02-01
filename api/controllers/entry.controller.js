@@ -3,10 +3,21 @@ import { errorHandler } from "../utils/error.js";
 import CryptoJS from 'crypto-js';
 
 
-export const createEntry = async (req, res, next) => {
+// export const createEntry = async (req, res, next) => {
 
+//     try {
+//         const entry = await Entry.create(req.body);
+//         return res.status(201).json(entry);
+//     } catch (error) {
+//         next(error);
+//     }
+// }
+
+export const createEntry = async (req, res, next) => {
+    const {date, title, mood, description, userRef } = req.body
+    const encryptDescription = CryptoJS.AES.encrypt(description, 'password').toString();
     try {
-        const entry = await Entry.create(req.body);
+        const entry = await Entry.create({ date, title, mood, userRef, description: encryptDescription});
         return res.status(201).json(entry);
     } catch (error) {
         next(error);

@@ -5,6 +5,13 @@ import { app } from '../firebase';
 import { updateUserStart, updateUserFailure, updateUserSuccess, deleteUserFailure, deleteUserStart, deleteUserSuccess, signOutUserStart } from '../redux/user/userSlice';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPencil } from '@fortawesome/free-solid-svg-icons';
+
+
+
+
+
 export default function Profile() {
   const fileRef = useRef(null);
   const { currentUser, loading, error } = useSelector((state) => state.user)
@@ -112,19 +119,31 @@ export default function Profile() {
 
   return (
     <div className='py-20 max-w-lg mx-auto'>
-      <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
+      <h1 className='text-3xl font-semibold text-center my-7 text-veryDarkGreen'>Profile</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
+          
         <input 
           onChange={(e) => setFile(e.target.files[0])} 
           type='file' 
           ref={fileRef} hidden 
           accept='image/*' />
+      <div className='cursor-pointer self-center'>
         <img onClick={() => 
           fileRef.current.click()} 
           src={formData?.avatar || currentUser.avatar} 
           alt="avatar" 
           className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2' 
         />
+        
+        <FontAwesomeIcon 
+          onClick={() => 
+          fileRef.current.click()} 
+          src={formData?.avatar || currentUser.avatar} 
+          alt="avatar" 
+          icon={faPencil} 
+          className='mt-[-25px] bg-lightGreen p-2 rounded-full text-white ml-16 self-center absolute' />
+
+        </div>
         <p className='text-sm self-center'>
           {fileUploadError ? 
           <span className='text-red-700'>Error Image Upload (image must be less than 2mb)</span> 
