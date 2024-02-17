@@ -59,6 +59,8 @@ const { loading, error } = useSelector((state) => state.user)
   return (
     <div className='p-4 py-40 max-w-lg mx-auto'>
       <h1 className='text-3xl text-center font-semibold my-7 text-darkGreen'>Sign In</h1>
+      <p className='text-center text-darkGreen'>Email: demo@animo.com</p>
+      <p className='text-center text-darkGreen'>Password: demo1</p>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         
         <input type='email' placeholder='email' className='border p-3 rounded-lg' id='email' onChange={handleChange}/>
