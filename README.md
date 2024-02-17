@@ -22,7 +22,10 @@ Animo is a full stack app where users can create journal entries each day and fi
 
 # How to Use
 
-In order to have access to the calendar, a user must register
+In order to have access to the calendar, a user must register or sign in. </br>
+Demo Account:</br>
+Email: demo@animo.com</br>
+Password: demo1
 
 ![alt text](https://i.ibb.co/Cv428Pk/animo-ss2.png)
 
