@@ -7,7 +7,6 @@ import SignUp from './SignUp';
 import { useSelector } from 'react-redux';
 import { render } from "react-dom";
 import Quote from '../components/Quote';
-import CryptoJS from 'crypto-js';
 import { Link } from 'react-router-dom';
 import UpdateEntry from './UpdateEntry';
 
