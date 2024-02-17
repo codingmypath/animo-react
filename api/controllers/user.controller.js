@@ -50,7 +50,7 @@ export const getUserEntries = async (req, res, next) => {
     if (req.user.id === req.params.id) {
         try {
             const entries = await Entry.find({ userRef: req.params.id});
-            const updated = entries.map( item => Object.assign(item, {description: CryptoJS.AES.decrypt(item.description, 'password').toString(CryptoJS.enc.Utf8)
+            const updated = entries.map( item => Object.assign(item, {description: CryptoJS.AES.decrypt(item.description, process.env.ENCRYPT_WORD).toString(CryptoJS.enc.Utf8)
             }))
              
             // const decryptDescription = CryptoJS.AES.decrypt(entries.description, 'password').toString(CryptoJS.enc.Utf8);

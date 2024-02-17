@@ -8,6 +8,8 @@ import { useSelector } from 'react-redux';
 import { render } from "react-dom";
 import Quote from '../components/Quote';
 import CryptoJS from 'crypto-js';
+import { Link } from 'react-router-dom';
+import UpdateEntry from './UpdateEntry';
 
 
 
@@ -253,7 +255,10 @@ function Home() {
       />
     }
 
-     {
+
+
+
+    {
       clicked && eventForDate(clicked) &&
       // <DeleteEntry 
       //   eventText={eventForDate(clicked)}
@@ -276,6 +281,9 @@ function Home() {
             {/* <p className="p-2 pb-4">{CryptoJS.AES.decrypt(eventForDate(clicked).description.toString(), 'password').toString(CryptoJS.enc.Utf8)}</p> */}
             <p className="p-2 pb-4">{ eventForDate(clicked).description.toString() }</p>
             <button onClick={() => onDelete(eventForDate(clicked)._id)} type="button" className="journal-button del text-md cursor-pointer bg-darkGreen text-white rounded-sm p-1.5 m-1.5 mt-4" id="deleteButton">Delete</button>
+            <Link to={`/update-entry/${eventForDate(clicked)._id}`}> 
+            <button type="button" id="closeButton" className="del text-md cursor-pointer bg-darkGreen text-white rounded-sm p-1.5 m-1.5">Edit</button>
+            </Link>
             <button onClick={() => setClicked(null)} type="button" id="closeButton" className="del text-md cursor-pointer bg-darkGreen text-white rounded-sm p-1.5 m-1.5 mt-4">Close</button>
         </form> 
             <div id="modalBackDrop" className="top-0 left-0 bottom-0 z-10 absolute bg-black bg-opacity-70 w-full h-full block"></div>

@@ -7,9 +7,9 @@ import About from './pages/About'
 import Profile from './pages/Profile'
 import Header from './components/Header'
 import PrivateRoute from './components/PrivateRoute'
-import CreateListing from './pages/CreateListing'
 import Footer  from './components/Footer'
 import Resources from './pages/Resources'
+import UpdateEntry from './pages/UpdateEntry'
 
 export default function App() {
   return (
@@ -22,8 +22,8 @@ export default function App() {
       <Route path="/resources" element={<Resources />} />
       <Route element={<PrivateRoute />} >
         <Route path="/profile" element={<Profile />} />
-        <Route path="/create-listing" element={<CreateListing />} />
         <Route path="/" element={<Home />} />
+        <Route path="/update-entry/:entryId" element={<UpdateEntry />} />
       </Route>
     </Routes>
     <Footer />
