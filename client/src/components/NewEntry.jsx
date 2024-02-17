@@ -173,7 +173,7 @@ export const NewEntry = ({onSave, onEntry, onClose, entryDate}) => {
                 <button onClick={onClose} id="cancelButton deleteButon"></button>
             </div> */}
                 
-            <div id="modalBackDrop" className="top-0 left-0 z-10 absolute block w-screen bg-black bg-opacity-70 h-full"></div>
+            <div id="modalBackDrop" className="top-0 left-0 z-10 fixed block w-screen bg-black bg-opacity-70 h-full"></div>
         </>
     )
 }

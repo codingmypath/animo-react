@@ -118,7 +118,7 @@ export default function Profile() {
   }
 
   return (
-    <div className='py-20 max-w-lg mx-auto'>
+    <div className='py-20 max-w-lg mx-auto p-2'>
       <h1 className='text-3xl font-semibold text-center my-7 text-veryDarkGreen'>Profile</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
           

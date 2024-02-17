@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export const Day = ( {day, onClick}) => {
-    const className = `font-mulish w-full h-[60px] m-0 border-[0.25px] border-lightestGreen white no-underline flex sm:h-[75px] sm:w-[75px] md:h-[100px] md:w-[100px] bg-veryLightGreen md:bg-white p-1 cursor-pointer rounded-sm sm:m-0.5 ${day.value === 'padding' ? 'padding' : ''} ${day.isCurrentDay ? 'rounded-sm !border-2 !border-middleGreen' : ''}`;
+    const className = `font-mulish text-veryDarkGreen w-full h-[60px] m-0 border-[0.25px] border-lightestGreen white no-underline flex sm:h-[75px] sm:w-[75px] md:h-[100px] md:w-[100px] bg-veryLightGreen md:bg-white p-1 cursor-pointer rounded-sm sm:m-0.5 ${day.value === 'padding' ? 'padding' : ''} ${day.isCurrentDay ? 'rounded-sm !border-2 !border-middleGreen' : ''}`;
     
     console.log("Day component", day)
     console.log("Day event", day.event)

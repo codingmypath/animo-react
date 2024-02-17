@@ -186,7 +186,7 @@ function Home() {
     <>
     { userEntries &&
       <div>
-      <section className="font-mulish px-2 w-full sm:px-9 max-w-[800px] m-auto mt-20 p-4 pb-20">
+      <section className="font-mulish px-2 w-full sm:px-9 max-w-[800px] m-auto mt-10 sm:mt-20 p-4 pb-20">
           {/* <section className="quote">
               <h1>Quote of the Day</h1>
               <p className="quotes"></p>
@@ -200,7 +200,7 @@ function Home() {
             onBack={() => setNav(nav - 1)}
           />
 
-          <ul className="flex justify-center p-0 text-xs sm:text-sm">
+          <ul className="flex text-veryDarkGreen justify-center p-0 pb-1 text-xs sm:text-sm">
               <li className='w-full text-center flex-1 list-none '>Sunday</li>
               <li className='w-full text-center flex-1 list-none '>Monday</li>
               <li className='w-full text-center flex-1 list-none '>Tuesday</li>
