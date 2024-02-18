@@ -112,7 +112,7 @@ export const NewEntry = ({onSave, onEntry, onClose, entryDate}) => {
         <div className="title-form p-4">
             <label className="title-label font-bold p-4">Title</label>
             <p id="titleShow"></p>
-            <input onChange={handleChange} className="input" type="text" name="title" id="title" placeholder="Title" value={formData.title} required />
+            <input onChange={handleChange} className="input focus:outline-none pl-1" type="text" name="title" id="title" placeholder="Title" value={formData.title} required />
         </div>
         <h3 className="font-bold pt-4">How was your day?</h3>
         
@@ -144,7 +144,7 @@ export const NewEntry = ({onSave, onEntry, onClose, entryDate}) => {
         <h3 id="journal-today" className="font-bold pt-4">What happened today?</h3>
         <p id="journalShow"></p>
         <div className="textbox-div">
-            <textarea onChange={handleChange} className="input focus:outline-none w-full" id="description" placeholder="Today.." name="description" rows="5" cols="35" required="required"></textarea><br />
+            <textarea onChange={handleChange} className="input focus:outline-none p-1 w-full " id="description" placeholder="Today.." name="description" rows="5" cols="35" required="required"></textarea><br />
         </div>
         
         <div className="button-div">

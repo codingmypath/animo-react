@@ -11,30 +11,25 @@ export default function Quote() {
     const [author, setAuthor] = useState("");
  
     useEffect(() => {
+    
+        fetch("https://mentalhealthapi-txsj.onrender.com/api/allQuotes")
+            .then(res => res.json())
+            .then(data => {
+                function random() {
+                    const date = new Date();
+                    let days = date.getFullYear() * date.getDate() * (date.getMonth() + 1);
+                    console.log('days: ', days)
+                    return (Math.floor(days) % data.length);
+                }
 
-        fetch("https://type.fit/api/quotes")
-    .then(res => res.json())
-    .then(data => {
-
-    function random() {
-        const date = new Date();
-        console.log(date.getFullYear())
-        console.log(date.getDate())
-        console.log((date.getMonth() + 1))
-        console.log('test ' + data.length)
-        console.log(date.getFullYear() * date.getDate() * (date.getMonth() + 1))
-        return (date.getFullYear() * date.getDate() * (date.getMonth() + 1)) % data.length;
+                console.log("random:", random())
+                setQuote(data[random()].quote);
+                setAuthor(data[random()].author);
+            })
         
-    }
-    console.log('answer ' + random())
-    setQuote(data[random()].text)
-    setAuthor(data[random()].author.split(',')[0])
-
-
-})
-.catch(err => {
-    console.log(`error ${err}`)
-})
+    .catch(err => {
+        console.log(`error ${err}`)
+    })
     }, [])     
 
     return (
