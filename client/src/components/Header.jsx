@@ -15,8 +15,8 @@ export default function Header() {
 
   return (
 <div>
-    <header className='font-mulish flex top-0 bg-lightestGreen shadow-md text-darkGreen'>
-            <div className='hidden md:flex justify-between items-center max-w-6xl mx-auto p-3'>
+    <header className='font-mulish top-0 bg-lightestGreen shadow-md text-darkGreen'>
+            <div className='hidden md:flex justify-between items-center max-w-7xl mx-auto p-3'>
                 <Link to='/'>
                     <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
                         {/* <span className='text-sky-600'>Animo</span> */}
