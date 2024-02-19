@@ -141,7 +141,7 @@ export default function Profile() {
           src={formData?.avatar || currentUser.avatar} 
           alt="avatar" 
           icon={faPencil} 
-          className='mt-[-25px] bg-lightGreen p-2 rounded-full text-white ml-16 self-center absolute' />
+          className='mt-[-25px] bg-lightGreen p-2 rounded-full text-white ml-16 self-center absolute z-0' />
 
         </div>
         <p className='text-sm self-center'>

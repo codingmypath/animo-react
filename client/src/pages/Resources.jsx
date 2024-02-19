@@ -13,7 +13,7 @@ export default function Resources() {
             <h3 className="resource-title font-bold p-2 pt-6 text-middleGreen">National Suicide Prevention Lifeline</h3>
             <p>1-800-273-TALK (8255)</p>
             <p>Veterans: Press 1</p>
-            <h3 class="resource-title font-bold p-2 pt-6 text-middleGreen">Crisis Text Line</h3>
+            <h3 className="resource-title font-bold p-2 pt-6 text-middleGreen">Crisis Text Line</h3>
             <p>Text TALK to 741741</p>
             <h3 className="resource-title font-bold p-2 pt-6 text-middleGreen">RAINN</h3>
             <p>National Sexual Assault Hotline</p>
