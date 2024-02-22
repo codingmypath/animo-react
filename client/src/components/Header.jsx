@@ -33,7 +33,7 @@ export default function Header() {
                     <Link to='/profile'>
                     {currentUser ? (
                         <img className='rounded-full h-7 w-7 object-cover' src={currentUser.avatar} alt='avatar' />
-                    ) : (<li className='text-slate-700 hover:underline'>Sign In</li> 
+                    ) : (<li className='sm:inline text-darkGreen hover:text-middleGreen'>Sign In</li> 
                     
                     )}               
                     </Link>
@@ -41,12 +41,12 @@ export default function Header() {
             </div>
             
     </header>
-    <div className='md:hidden fixed basis-full justify-right p-4 z-50'>
+    <div className='md:hidden basis-full justify-right z-40'>
                 <div onClick={toggleNavbar}>
-                    { openNav ? <FaX className='text-darkGreen hover:cursor-pointer w-6 h-6'/> :  <button>
+                    { openNav ? <FaX className='text-darkGreen hover:cursor-pointer ml-3 mt-4 w-6 h-6 fixed z-50 '/> :  <button>
                 {currentUser ? (
-                    <img className='rounded-full h-8 w-8 object-cover' src={currentUser.avatar} alt='avatar' />
-                ) : (<li className='text-slate-700 hover:underline'>Sign In</li> 
+                    <img className='rounded-full ml-3 h-8 w-8 object-cover fixed' src={currentUser.avatar} alt='avatar' />
+                ) : (<img src="/animo1-remove.png" className='w-36 relative p-2' />
                 
                 )}               
                 </button> }
@@ -72,7 +72,7 @@ export default function Header() {
                 <Link to='/profile' onClick={toggleNavbar}>
                 {currentUser ? (
                    <li className='text-darkGreen hover:text-middleGreen'>Profile</li>
-                ) : (<li className='text-slate-700 hover:underline'>Sign In</li> 
+                ) : (<li className='text-darkGreen hover:underline'>Sign In</li> 
                 
                 )}               
                 </Link>
