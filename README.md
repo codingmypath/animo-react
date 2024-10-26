@@ -2,7 +2,8 @@
 
 # Animo
 
-Animo is a full stack app where users can create journal entries each day and find important mental health resources.
+Animo is a full stack app where users can create journal entries each day and find important mental health resources.</br>
+Website: https://animoapp.onrender.com/
 
 ---
 
@@ -29,7 +30,7 @@ Password: demo1
 
 ![alt text](https://i.ibb.co/Cv428Pk/animo-ss2.png)
 
-A user can update their profile picture and username. Also, delete their account or sign out. 
+A user can update their profile picture, username, and password. Also, delete their account or sign out. 
 
 ![alt text](https://i.ibb.co/0j9VTL5/animo-profile.png)
 
